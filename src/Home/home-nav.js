@@ -20,7 +20,7 @@ export class HomeNav extends React.Component {
             </a>
             <div className="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                 <ul className="navbar-nav ml-auto mr-0">
-                    <li onClick={this.props.handleOnClick}  className="nav-item">
+                    <li onClick={this.props.handleOnClick}  className="nav-item pointer">
                         <a className="nav-link">CONTACT US</a>
                     </li>
                     <li className="nav-item">
@@ -29,15 +29,10 @@ export class HomeNav extends React.Component {
                     <li onClick={this.props.handleOnClick}  className="nav-item pointer">
                         <a className="nav-link" >LOG IN</a>
                     </li>
-                    <li  onClick={this.props.handleOnClick}  className="nav-item">
+                    <li  onClick={this.props.handleOnClick}  className="nav-item pointer">
                         <a className=" btn-nav nav-link" >SIGN UP</a>
                     </li>
-                    <li className=" esc-btn nav-item nav-item d-block d-sm-block d-md-none">
-                        <a className="nav-link" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <i className="fa fa-2x fa-times" aria-hidden="true"></i>
-                        </a>
-                    </li>
+    
 
                 </ul>
             </div>
