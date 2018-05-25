@@ -58,7 +58,7 @@ export class HomeHeader extends React.Component {
         return (
             <section className="home-header">
                 <MobileNav menuVisibility={this.state.visible} />
-                <HomeNav hasScrolled={this.state.scrolling} onScroll={this.handleOnScroll} />
+                <HomeNav handleOnClick={this.props.modalTrigger} hasScrolled={this.state.scrolling} onScroll={this.handleOnScroll} />
                 <MobileBtn menuVisibility={this.state.visible} handleOnClick={this.handleOnClick} />
                 <HeaderContent />
             </section>
