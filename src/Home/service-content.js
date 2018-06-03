@@ -72,6 +72,8 @@ export class ServiceContent extends React.Component {
                         </div>
                     </div>
                 </div>
+                <div className="ptb-30">
+                </div>
             </Fragment >
         );
     }

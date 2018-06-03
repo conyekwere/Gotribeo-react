@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import '../styles/home-header.css';
 
 
 export class HomeFooter extends React.Component {

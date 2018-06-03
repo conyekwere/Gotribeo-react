@@ -1,31 +1,48 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+
 import { HomeHeader } from '../Home/home-header.js'
 import { ServiceContent } from '../Home/service-content.js'
 import { HomeFooter } from '../Home/home-footer.js'
-import { Modal } from './Modal.js'
+import { DialogConductor } from '../Dialog/dialog-conductor.js'
+
+import '../styles/home-header.css';
+import '../styles/Modal.css';
+
 export class Gotribeo extends React.Component {
-constructor(props) {
+
+  constructor(props) {
     super(props);
 
-    this.state = { isOpen: false };
-    }
+    this.state = {
+      isOpen: false,
+      triggerPrompt: ''
+    };
+    this.toggleDialog = this.toggleDialog.bind(this);
+  }
 
-    toggleModal = () => {
+  toggleDialog = (promptType) => {
     this.setState({
-        isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
+      triggerPrompt: promptType
     });
+  }
+
+  render() {
+    return (
+      <Fragment>
+        <HomeHeader dialogTrigger={this.toggleDialog} />
+        <ServiceContent />
+        <HomeFooter />
+        <DialogConductor
+          show={this.state.isOpen}
+          onClose={this.toggleDialog}
+          currentModal={this.state.triggerPrompt} />
+      </Fragment>
+    );
+  }
 }
-    render() {
-        return (
-            <Fragment>
-                <HomeHeader modalTrigger={this.toggleModal} />
-                <ServiceContent />
-                <HomeFooter />
-                <Modal show={this.state.isOpen}
-                    onClose={this.toggleModal}>
-                    `This is a test`
-                </Modal>
-            </Fragment>
-        );
-    }
-}
+
+Gotribeo.propTypes = {
+  currentModal: PropTypes.string
+};
