@@ -3,7 +3,7 @@ import { HomeNav } from '../Home/home-nav.js';
 import { MobileBtn } from '../Home/mobile-btn.js';
 import { MobileNav } from '../Home/mobile-nav.js';
 import { HeaderContent } from '../Home/header-content.js';
-import '../styles/home-header.css';
+
 
 
 export class HomeHeader extends React.Component {
@@ -58,7 +58,7 @@ export class HomeHeader extends React.Component {
         return (
             <section className="home-header">
                 <MobileNav menuVisibility={this.state.visible} />
-                <HomeNav handleOnClick={this.props.modalTrigger} hasScrolled={this.state.scrolling} onScroll={this.handleOnScroll} />
+                <HomeNav handleOnClick={this.props.dialogTrigger} hasScrolled={this.state.scrolling} onScroll={this.handleOnScroll} />
                 <MobileBtn menuVisibility={this.state.visible} handleOnClick={this.handleOnClick} />
                 <HeaderContent />
             </section>
