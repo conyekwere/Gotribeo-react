@@ -10,9 +10,12 @@ export class DialogWrapper extends React.Component {
   render() {
     switch (this.props.dialogType) {
       case 'alert':
-        return <AlertType content={this.props.content}  title={this.props.title} isOpen={this.props.show} toggle={this.props.onClose} />;
+        return <AlertType content={this.props.content}  title={this.props.title} 
+isOpen={this.props.show} toggle={this.props.onClose} />;
         case 'signup':
-        return <SignupType content={this.props.content}  title={this.props.title} isOpen={this.props.show} toggle={this.props.onClose} />;
+        return <SignupType content={this.props.content}  title={this.props.title} 
+input={this.props.input}
+isOpen={this.props.show} toggle={this.props.onClose} />;
         case 'contact':
         return <ContactType content={this.props.content}  title={this.props.title} isOpen={this.props.show} toggle={this.props.onClose} />;
         case 'login':

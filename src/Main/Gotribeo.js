@@ -16,9 +16,11 @@ export class Gotribeo extends React.Component {
 
     this.state = {
       isOpen: false,
-      triggerPrompt: ''
+      triggerPrompt: '',
+      value:''
     };
     this.toggleDialog = this.toggleDialog.bind(this);
+     this.bindValue = this.bindValue.bind(this);
   }
 
   toggleDialog = (promptType) => {
@@ -27,18 +29,25 @@ export class Gotribeo extends React.Component {
       triggerPrompt: promptType
     });
   }
-
+bindValue = (inputValue) => {
+    this.setState(
+      value: inputValue
+    });
+  }
   render() {
     return (
       <Fragment>
-        <HomeHeader dialogTrigger={this.toggleDialog} />
+        <HomeHeader dialogTrigger={this.toggleDialog} 
+        ctaTrigger ={this.bindValue}/>
         <ServiceContent />
         <HomeFooter />
         <DialogConductor
           show={this.state.isOpen}
-          onClose={this.toggleDialog}
-          currentModal={this.state.triggerPrompt} />
+          onClose={this.toggleDialog
+          signupInput={this.state.inputValue}
+    currentModal={this.state.triggerPrompt} />
       </Fragment>
+    {/* research secure way to move input data */}
     );
   }
 }
