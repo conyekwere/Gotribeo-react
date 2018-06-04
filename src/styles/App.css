@@ -6295,6 +6295,18 @@ a.text-dark:hover, a.text-dark:focus {
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
 
+/* input autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #637cc0;
+  transition: background-color 5000s ease-in-out 0s; }
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 10px; }
