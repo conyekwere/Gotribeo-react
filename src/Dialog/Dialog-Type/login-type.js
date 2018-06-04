@@ -2,18 +2,18 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 
-export class SignupType extends React.Component {
+export class LoginType extends React.Component {
 
   constructor(props) {
     super(props);
     this.promptDialog = this.promptDialog.bind(this);
-}
+  }
 
-  promptDialog = (type) => { 
+  promptDialog = (type) => {
     this.props.toggle(type);
-    setTimeout(function() { 
+    setTimeout(function () {
       this.props.toggle(type);
-  }.bind(this), 10)
+    }.bind(this), 10)
   }
 
   render() {
@@ -26,12 +26,7 @@ export class SignupType extends React.Component {
       <Modal isOpen={this.props.isOpen} toggle={this.props.toggle} className={this.props.className} external={externalCloseBtn}>
         <ModalHeader >{this.props.title}</ModalHeader>
         <ModalBody>
-          <form name="signup" noValidate="">
-            <div className="form-group">
-              <label htmlFor="recipient-name" className="col-form-label">Full name:</label>
-              <input type="text" name="firstName" id="firstName" className="form-control input" required="" />
-              <span className="hidden help-block">Full name is required</span>
-            </div>
+          <form name="login" noValidate="">
             <div className="form-group">
               <label htmlFor="recipient-name" className="col-form-label">Email:</label>
               <input name="email" id="email" className="form-control input" required="" />
@@ -46,28 +41,24 @@ export class SignupType extends React.Component {
           </form>
         </ModalBody>
         <ModalFooter>
-  
-<div className="form-actions col-12">
-    <Button className=" col-12 " color="success" onClick={this.props.toggle}>Sign Up</Button>
-    <hr/>
-    <button className="btn btn-block btn-social btn-facebook">
-    Sign Up with Facebook
+
+          <div className="form-actions col-12">
+            <Button className=" col-12 " color="success" onClick={this.props.toggle}>Log In</Button>
+            <hr />
+            <button className="btn btn-block btn-social btn-facebook">
+              Log In with Facebook
     </button>
-    <br/>
-    <div className=" text-center signup-agreement">
-                    By signing up, you are agreeing to our
-                    <a className="text-success pointer">
-                        <strong  onClick={() => this.promptDialog('TermsDialog')} >&nbsp; Terms of Service</strong>
-                    </a>
-                    &nbsp;and
-                    <a className="text-success pointer">
-                        <strong onClick={() => this.promptDialog('PolicyDialog')} 
-                         >&nbsp; Privacy Policy</strong>
-                    </a>
-                </div>
-</div>
-       
-       
+            <br />
+            <div className=" text-center">
+
+              <a className="text-success pointer">
+                <strong onClick={() => this.promptDialog('ForgotDialog')} >&nbsp; Forgot Password ? </strong>
+              </a>
+
+            </div>
+          </div>
+
+
         </ModalFooter>
       </Modal>
 

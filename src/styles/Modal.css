@@ -4,7 +4,8 @@
     padding: 0 24px; }
     .modal .modal-body.scroll {
       max-height: calc(100% - 120px);
-      overflow-y: scroll; }
+      overflow-y: scroll;
+      height: 400px; }
     .modal .modal-body form .input:focus {
       box-sizing: border-box;
       -moz-box-sizing: border-box;
