@@ -34,7 +34,7 @@ export class SignupType extends React.Component {
             </div>
             <div className="form-group">
               <label htmlFor="recipient-name" className="col-form-label">Email:</label>
-              <input name="email" id="email" className="form-control input" required="" />
+              <input name="email" id="email" className="form-control input" value={this.props.input} required="" />
               <span className="hidden help-block">Email or phone number is required</span>
             </div>
             <div className="form-group">
