@@ -4,6 +4,7 @@ import { DialogContact } from '../Dialog/Dialogs/dialog-contact.js'
 import { DialogTerms } from '../Dialog/Dialogs/dialog-terms.js'
 import { DialogPolicy } from '../Dialog/Dialogs/dialog-policy.js'
 import { DialogLogin } from '../Dialog/Dialogs/dialog-login.js'
+import { DialogForgot } from '../Dialog/Dialogs/dialog-forgot.js'
 
 
 export class DialogConductor extends React.Component {
@@ -19,6 +20,8 @@ export class DialogConductor extends React.Component {
         return <DialogPolicy show={this.props.show} onClose={this.props.onClose} />;
         case 'LoginDialog':
         return <DialogLogin show={this.props.show} onClose={this.props.onClose} />;
+        case 'ForgotDialog':
+        return <DialogForgot show={this.props.show} onClose={this.props.onClose} />;
       default:
         return null;
     }

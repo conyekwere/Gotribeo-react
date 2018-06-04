@@ -1,8 +1,9 @@
 import React from 'react';
 import { AlertType } from '../Dialog/Dialog-Type/alert-type.js'
-import {SignupType } from '../Dialog/Dialog-Type/signup-type'
-import {ContactType } from '../Dialog/Dialog-Type/contact-type'
-import {LoginType } from '../Dialog/Dialog-Type/login-type'
+import {SignupType } from '../Dialog/Dialog-Type/signup-type.js'
+import {ContactType } from '../Dialog/Dialog-Type/contact-type.js'
+import {LoginType } from '../Dialog/Dialog-Type/login-type.js'
+import {ForgotType } from '../Dialog/Dialog-Type/forgot-type.js'
 
 
 export class DialogWrapper extends React.Component {
@@ -16,7 +17,10 @@ export class DialogWrapper extends React.Component {
         return <ContactType content={this.props.content}  title={this.props.title} isOpen={this.props.show} toggle={this.props.onClose} />;
         case 'login':
         return <LoginType content={this.props.content}  title={this.props.title} isOpen={this.props.show} toggle={this.props.onClose} />;
-      default:
+        case 'forgot':
+        return <ForgotType content={this.props.content}   subtitle={this.props.subtitle}  title={this.props.title} isOpen={this.props.show} toggle={this.props.onClose} />;
+      
+        default:
         return null;
     }
   }
