@@ -33,7 +33,7 @@ export class HomeNav extends React.Component {
                     <li className="nav-item">
                         <a className="nav-link" >BLOG</a>
                     </li>
-                    <li  className="nav-item pointer">
+                    <li   onClick={() => this.promptDialog('LoginDialog')}  className="nav-item pointer">
                         <a className="nav-link" > LOG IN</a>                    
                     </li>
                     <li  onClick={() => this.promptDialog('SignUpDialog')}   className="nav-item pointer" type='SignUpDialog'>

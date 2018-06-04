@@ -7,11 +7,12 @@
       &.scroll{
         max-height: calc(100% - 120px);
         overflow-y: scroll;
+        height: 400px;
       }
       form{
         .input:focus {
           box-sizing: border-box;
-          -moz-box-sizing: border-box;
+          -moz-box-sizing: border-box; 
           color: inherit;
           background-color: #fff;
           font-family: inherit;

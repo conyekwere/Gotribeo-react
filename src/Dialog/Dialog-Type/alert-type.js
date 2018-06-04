@@ -15,7 +15,7 @@ export class AlertType extends React.Component {
     return (
       <Modal isOpen={this.props.isOpen} toggle={this.props.toggle} className={this.props.className} external={externalCloseBtn}>
         <ModalHeader >{this.props.title}</ModalHeader>
-        <ModalBody>
+        <ModalBody className="scroll">
           {this.props.content}
         </ModalBody>
         <ModalFooter>
