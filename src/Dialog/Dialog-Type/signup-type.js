@@ -6,7 +6,7 @@ export class SignupType extends React.Component {
 
   constructor(props) {
     super(props);
-    this.promptDialog = this.promptDialog.bind(this);
+    this.promptDialog = this.promptDialog.bind(this); 
 }
 
   promptDialog = (type) => { 
@@ -15,6 +15,7 @@ export class SignupType extends React.Component {
       this.props.toggle(type);
   }.bind(this), 10)
   }
+
 
   render() {
     const externalCloseBtn =
@@ -34,13 +35,13 @@ export class SignupType extends React.Component {
             </div>
             <div className="form-group">
               <label htmlFor="recipient-name" className="col-form-label">Email:</label>
-              <input name="email" id="email" className="form-control input" required="" />
+              <input name="email" id="email" className="form-control input"  defaultValue={this.props.input} required="" />
               <span className="hidden help-block">Email or phone number is required</span>
             </div>
             <div className="form-group">
 
               <label htmlFor="recipient-name" className="col-form-label">Password:</label>
-              <input name="password" id="password" className="form-control input" required="" />
+              <input type="password" name="password" id="password" className="form-control input" required="" />
               <span className=" hidden help-block">Password is required</span>
             </div>
           </form>

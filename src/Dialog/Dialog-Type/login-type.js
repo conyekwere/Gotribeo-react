@@ -35,7 +35,7 @@ export class LoginType extends React.Component {
             <div className="form-group">
 
               <label htmlFor="recipient-name" className="col-form-label">Password:</label>
-              <input name="password" id="password" className="form-control input" required="" />
+              <input type="password" name="password" id="password" className="form-control input" required="" />
               <span className=" hidden help-block">Password is required</span>
             </div>
           </form>

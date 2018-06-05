@@ -60,7 +60,7 @@ export class HomeHeader extends React.Component {
                 <MobileNav menuVisibility={this.state.visible} />
                 <HomeNav handleOnClick={this.props.dialogTrigger} hasScrolled={this.state.scrolling} onScroll={this.handleOnScroll} />
                 <MobileBtn menuVisibility={this.state.visible} handleOnClick={this.handleOnClick} />
-                <HeaderContent />
+                <HeaderContent   trigger={this.props.ctaTrigger}  toggle={this.props.dialogTrigger} />
             </section>
         );
     }
