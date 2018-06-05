@@ -17,8 +17,8 @@ export class HeaderContent extends React.Component {
   }
 
   handleSubmit = (e)  => {
-    alert('A name was submitted: ' + this.state.value);
-   {/* this.props.toggle(type);*/}
+   this.props.toggle('SignUpDialog');
+   this.props.trigger(this.state.value);
     e.preventDefault();
   }
   render() {

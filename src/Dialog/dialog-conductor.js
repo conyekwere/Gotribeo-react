@@ -11,7 +11,7 @@ export class DialogConductor extends React.Component {
   render() {
     switch (this.props.currentModal) {
       case 'SignUpDialog':
-        return <DialogSignup show={this.props.show} {cta=this.props.signupInput}onClose={this.props.onClose} />;
+        return <DialogSignup show={this.props.show} cta={this.props.signupInput} onClose={this.props.onClose} />;
         case 'ContactDialog':
         return <DialogContact show={this.props.show} onClose={this.props.onClose} />;
         case 'TermsDialog':

@@ -30,7 +30,7 @@ export class Gotribeo extends React.Component {
     });
   }
 bindValue = (inputValue) => {
-    this.setState(
+    this.setState({
       value: inputValue
     });
   }
@@ -39,15 +39,16 @@ bindValue = (inputValue) => {
       <Fragment>
         <HomeHeader dialogTrigger={this.toggleDialog} 
         ctaTrigger ={this.bindValue}/>
+               {/* research secure way to move input data */}
         <ServiceContent />
         <HomeFooter />
         <DialogConductor
           show={this.state.isOpen}
-          onClose={this.toggleDialog
-          signupInput={this.state.inputValue}
+          onClose={this.toggleDialog}
+          signupInput={this.state.value}
     currentModal={this.state.triggerPrompt} />
       </Fragment>
-    {/* research secure way to move input data */}
+ 
     );
   }
 }
